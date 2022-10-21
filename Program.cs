@@ -32,12 +32,27 @@ public class CalUniqueNumbers
 
         // Get 10 integer values from the user and store them in an array
         int[] numValues = new int[10];
+        int arrSum = 0
 
         for (int i = 0; i < numValues.Length; i++)
         {
             Console.Write("Please enter an integer value: ");
             string? val = Console.ReadLine();
             numValues[i] = Convert.ToInt32(val);
+
+            arrSum += numValues[i];
         }
+
+        // Count of elements in the collection
+        Console.WriteLine(
+            "\nThe count of integers entered is: {0}",
+            numValues.Length
+        );
+
+        // Sum of all elements in the collection
+        Console.WriteLine(
+            "The sum of integers entered is: {0}",
+            arrSum
+        );
     }
 }
