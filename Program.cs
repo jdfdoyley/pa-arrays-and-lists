@@ -25,6 +25,9 @@ public class CalUniqueNumbers
 {
     static void Main(string[] args)
     {
-
+        // Print header line
+        Console.WriteLine(
+            "\nJason D'Oyley - Week 3 PA Calculations & Unique\n"
+        );
     }
 }
