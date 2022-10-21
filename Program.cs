@@ -54,5 +54,11 @@ public class CalUniqueNumbers
             "The sum of integers entered is: {0}",
             arrSum
         );
+
+        // Average of values in the collection
+        Console.WriteLine(
+            "The average of integers entered is: {0}",
+            (arrSum / numValues.Length)
+        );
     }
 }
