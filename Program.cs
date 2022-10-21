@@ -72,14 +72,20 @@ public class CalUniqueNumbers
 
         // LIST: Count of elements in the collection
         Console.WriteLine(
-            "\nThe count of integers entered is: {0}",
+            "\nThe count of unique integers entered is: {0}",
             uniqueValues.Count
         );
 
         // LIST: Sum of all elements in the collection
         Console.WriteLine(
-            "The sum of integers entered is: {0}",
+            "The sum of unique integers entered is: {0}",
             lstSum
+        );
+
+        // LIST: Average of values in the collection
+        Console.WriteLine(
+            "The average of unique integers entered is: {0}",
+            (lstSum / uniqueValues.Count)
         );
     }
 }
