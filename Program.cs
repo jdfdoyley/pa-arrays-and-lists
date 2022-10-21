@@ -29,5 +29,15 @@ public class CalUniqueNumbers
         Console.WriteLine(
             "\nJason D'Oyley - Week 3 PA Calculations & Unique\n"
         );
+
+        // Get 10 integer values from the user and store them in an array
+        int[] numValues = new int[10];
+
+        for (int i = 0; i < numValues.Length; i++)
+        {
+            Console.Write("Please enter an integer value: ");
+            string? val = Console.ReadLine();
+            numValues[i] = Convert.ToInt32(val);
+        }
     }
 }
