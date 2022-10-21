@@ -32,7 +32,9 @@ public class CalUniqueNumbers
 
         // Get 10 integer values from the user and store them in an array
         int[] numValues = new int[10];
-        int arrSum = 0
+        List<int> uniqueValues = new List<int>();
+        int arrSum = 0;
+        int lstSum = 0;
 
         for (int i = 0; i < numValues.Length; i++)
         {
@@ -40,25 +42,44 @@ public class CalUniqueNumbers
             string? val = Console.ReadLine();
             numValues[i] = Convert.ToInt32(val);
 
+            // Add unique integer value if not already in list variable
+            if (!uniqueValues.Contains(numValues[i]))
+            {
+                uniqueValues.Add(numValues[i]);
+                lstSum += numValues[i];
+            }
+
             arrSum += numValues[i];
         }
 
-        // Count of elements in the collection
+        // ARRAY: Count of elements in the collection
         Console.WriteLine(
             "\nThe count of integers entered is: {0}",
             numValues.Length
         );
 
-        // Sum of all elements in the collection
+        // ARRAY: Sum of all elements in the collection
         Console.WriteLine(
             "The sum of integers entered is: {0}",
             arrSum
         );
 
-        // Average of values in the collection
+        // ARRAY: Average of values in the collection
         Console.WriteLine(
             "The average of integers entered is: {0}",
             (arrSum / numValues.Length)
+        );
+
+        // LIST: Count of elements in the collection
+        Console.WriteLine(
+            "\nThe count of integers entered is: {0}",
+            uniqueValues.Count
+        );
+
+        // LIST: Sum of all elements in the collection
+        Console.WriteLine(
+            "The sum of integers entered is: {0}",
+            lstSum
         );
     }
 }
